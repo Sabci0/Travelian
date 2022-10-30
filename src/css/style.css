@@ -325,14 +325,21 @@ html, body {
 
 .intro {
   background-image: url("../images/Backgound.jpg");
+  background-position: center;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .header {
+  align-self: flex-start;
   display: flex;
   justify-content: space-between;
   align-items: center;
   max-width: 97.25rem;
-  margin: auto;
   width: 100%;
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
@@ -357,6 +364,102 @@ html, body {
   border-radius: 0.75rem;
   background-color: #FF7757;
   padding: 1.25rem 2rem;
+}
+
+.lead {
+  color: #FFF;
+  margin: auto;
+  max-width: 97.25rem;
+  width: 100%;
+}
+.lead__hdl {
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  font-size: 5.25rem;
+  line-height: 1.33;
+  margin: 0;
+}
+.lead__text {
+  font-family: Rubik, serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  display: inline-block;
+}
+
+.search {
+  width: 100%;
+  max-width: 97.25rem;
+  margin: auto;
+  position: relative;
+}
+.search::before {
+  content: "";
+  background-color: #FFF;
+  position: absolute;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  left: -100%;
+}
+.search__wrapper {
+  width: 100%;
+  background-color: #FFF;
+  display: flex;
+  align-items: center;
+  max-width: 80.6875rem;
+  justify-content: space-between;
+  border-radius: 0 1.25rem 1.25rem 0;
+}
+.search__group {
+  display: flex;
+  flex-direction: column;
+  padding-top: 4.25rem;
+  padding-bottom: 4.25rem;
+}
+.search__lbl {
+  font-family: Rubik, sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.287;
+  color: #767E86;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+.search__input {
+  width: 100%;
+  border-top-width: 0;
+  border-right-width: 0;
+  border-left-width: 0;
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem;
+  font-size: 1.25rem;
+  font-family: "Playfair Display", sans-serif;
+  font-weight: 400;
+}
+.search__btn {
+  background-color: #FF7757;
+  font-family: "Playfair Display", sans-serif;
+  font-weight: 400;
+  font-size: 2.25rem;
+  line-height: 1.33;
+  color: #FFF;
+  border: 0;
+  padding: 3.75rem 4.3125rem 3.75rem 1.25rem;
+  text-align: left;
+  border-radius: 0 1.25rem 1.25rem 0;
+  cursor: pointer;
+  margin-right: -1px;
+  position: relative;
+}
+.search__btn::after {
+  content: "";
+  background-image: url("../images/arow.svg");
+  display: inline-block;
+  width: 1.375rem;
+  height: 1rem;
+  position: absolute;
+  right: 1.125rem;
+  transform: translateY(-8px);
 }
 
 /*# sourceMappingURL=style.css.map */

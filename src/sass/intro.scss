@@ -1,7 +1,7 @@
 @import "variables";
 @import "helpers";
 
-%menu__item{
+%menu__item {
   font-family: Rubik, sans-serif;
   font-weight: 400;
   font-size: toRem(20px);
@@ -13,30 +13,40 @@
   display: inline-block;
 }
 
-.intro{
+.intro {
   background-image: url("#{$imgs-path}/Backgound.jpg");
+  background-position:center ;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+
 }
 
-.header{
+.header {
+  align-self: flex-start;
   display: flex;
   justify-content: space-between;
   align-items: center;
   max-width: toRem(1556px);
-  margin: auto;
   width: 100%;
   padding-top: toRem(20px);
   padding-bottom: toRem(20px);
 
 }
-.main-menu{
-  &__item{
+
+.main-menu {
+  &__item {
     @extend %menu__item
   }
-  &__item--active, &__item:hover{
+
+  &__item--active, &__item:hover {
     font-weight: 500;
     position: relative;
 
-    &::before{
+    &::before {
       content: '';
       position: absolute;
       bottom: toRem(6px);
@@ -49,13 +59,121 @@
   }
 }
 
-.auth-menu{
-  &__item{
+.auth-menu {
+  &__item {
     @extend %menu__item
   }
-  &__item--btn{
+
+  &__item--btn {
     border-radius: toRem(12px);
     background-color: $primar-color-border;
     padding: toRem(20px) toRem(32px);
+  }
+}
+
+.lead {
+  color: $primary-font-color;
+  margin: auto;
+  max-width: toRem(1556px);
+  width: 100%;
+
+  &__hdl {
+    font-family: "Playfair Display", serif;
+    font-weight: 400;
+    font-size: toRem(84px);
+    line-height: 1.33;
+    margin: 0;
+  }
+
+  &__text {
+    font-family: Rubik, serif;
+    font-weight: 400;
+    font-size: toRem(24px);
+    display: inline-block;
+  }
+}
+
+.search {
+  width: 100%;
+  max-width: toRem(1556px);
+  margin: auto;
+  position: relative;
+  &::before{
+    content: "";
+    background-color: $secondary-color;
+    position: absolute;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    left: -100%;
+  }
+
+  &__wrapper {
+    width: 100%;
+    background-color: $secondary-color;
+    display: flex;
+    align-items: center;
+    max-width: toRem(1291px);
+    justify-content: space-between;
+    border-radius:0 toRem(20px) toRem(20px) 0;
+  }
+
+  &__group {
+    display: flex;
+    flex-direction: column;
+    padding-top: toRem(68px);
+    padding-bottom: toRem(68px);
+  }
+
+  &__lbl {
+    font-family: Rubik, sans-serif;
+    font-weight: 400;
+    font-size: toRem(16px);
+    line-height: 1.287;
+    color:$secondary-color-font ;
+    text-transform: uppercase;
+    margin-bottom: toRem(12px);
+  }
+
+  &__input {
+    width: 100%;
+    border-top-width: 0;
+    border-right-width: 0;
+    border-left-width: 0;
+    padding-top:toRem(10px);
+    padding-bottom:toRem(10px);
+    font-size: toRem(20px);
+    font-family: "Playfair Display", sans-serif;
+    font-weight: 400;
+
+  }
+
+  &__input--select {
+  }
+
+  &__btn {
+    background-color: $primar-color-border;
+    font-family: 'Playfair Display', sans-serif;
+    font-weight: 400;
+    font-size: toRem(36px);
+    line-height: 1.33;
+    color:$primary-font-color;
+    border: 0;
+    padding:toRem(60px) toRem(69px) toRem(60px) toRem(20px);
+    text-align: left;
+    border-radius:0 toRem(20px) toRem(20px) 0;
+    cursor: pointer;
+    margin-right: -1px;
+    position: relative;
+    &::after{
+      content: '';
+      background-image:url("#{$imgs-path}/arow.svg") ;
+      display: inline-block;
+      width: toRem(22px);
+      height: toRem(16px);
+      position: absolute;
+      right: toRem(18px);
+      transform: translateY(-8px);
+    }
   }
 }
