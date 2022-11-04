@@ -329,13 +329,14 @@ html, body {
   background-size: cover;
   min-height: 100vh;
   display: flex;
-  flex-wrap: wrap;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
+  align-items: center;
+  padding-bottom: 6.25rem;
+  box-sizing: border-box;
 }
 
 .header {
-  align-self: flex-start;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -460,6 +461,84 @@ html, body {
   position: absolute;
   right: 1.125rem;
   transform: translateY(-8px);
+}
+
+.popular {
+  color: #172432;
+  margin: auto;
+  max-width: 97.25rem;
+  width: 100%;
+}
+.popular .destinations {
+  margin-top: 8.75rem;
+  font-size: 4rem;
+  font-family: "Playfair Display";
+}
+.popular .destinations::before {
+  content: "";
+  position: absolute;
+  bottom: -14.875rem;
+  left: 3.125rem;
+  width: calc(10% - 1.25rem);
+  height: 0.1875rem;
+  display: block;
+  background-color: #FF7757;
+}
+.popular .inscription_nav {
+  margin-bottom: 6.25rem;
+}
+.popular .places {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.popular .places__item {
+  color: #FFF;
+  min-width: 31.0625rem;
+  min-height: 41.3125rem;
+  border-radius: 26px;
+  font-family: "Playfair Display", sans-serif;
+  font-weight: 400;
+  margin-right: 2rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  text-align: left;
+  flex-direction: column;
+  font-size: 1.75rem;
+}
+.popular .places__item-city {
+  margin: 0 1.5rem;
+}
+.popular .places__item .map {
+  margin: 0 1.5rem 2.5rem;
+}
+.popular .places__item .map a {
+  display: block;
+  text-decoration: none;
+  color: #FFF;
+}
+.popular .places__item .map .map::before {
+  content: "elo";
+  background-image: url("../images/arow.svg");
+  display: inline-block;
+  width: 1.375rem;
+  height: 1rem;
+  position: absolute;
+  right: 1.125rem;
+  transform: translateY(-8px);
+}
+.popular .places__item:nth-child(1) {
+  background-image: url("../images/Col-block-1.png");
+}
+.popular .places__item:nth-child(2) {
+  background-image: url("../images/Col-block-2.png");
+}
+.popular .places__item:nth-child(3) {
+  background-image: url("../images/Col-block-3.png");
+}
+.popular .places__item:nth-child(4) {
+  background-image: url("../images/Col-block-4.png");
 }
 
 /*# sourceMappingURL=style.css.map */
