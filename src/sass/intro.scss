@@ -1,6 +1,7 @@
 @import "variables";
 @import "helpers";
 
+
 %menu__item {
   font-family: Rubik, sans-serif;
   font-weight: 400;
@@ -252,5 +253,21 @@
     &__item:nth-child(4){
       background-image: url("#{$imgs-path}/Col-block-4.png");
     }
+  }
+}
+
+.Offer{
+  margin-top: toRem(140px);
+  font-size: toRem(64px);
+  font-family: "Playfair Display";
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: toRem(-238px);
+    left: toRem(50px);
+    width: calc(10% - toRem(20px));
+    height: toRem(3px);
+    display: block;
+    background-color: $primar-color-border;
   }
 }

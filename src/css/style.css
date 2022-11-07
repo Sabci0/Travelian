@@ -541,4 +541,20 @@ html, body {
   background-image: url("../images/Col-block-4.png");
 }
 
+.Offer {
+  margin-top: 8.75rem;
+  font-size: 4rem;
+  font-family: "Playfair Display";
+}
+.Offer::before {
+  content: "";
+  position: absolute;
+  bottom: -14.875rem;
+  left: 3.125rem;
+  width: calc(10% - 1.25rem);
+  height: 0.1875rem;
+  display: block;
+  background-color: #FF7757;
+}
+
 /*# sourceMappingURL=style.css.map */
