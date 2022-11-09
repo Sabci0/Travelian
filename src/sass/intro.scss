@@ -273,7 +273,58 @@
     background-color: $primar-color-border;
   }
 }
-.Offer_nav{
-  justify-content: flex-end;
-  display: flex;
+.popular {
+  .Offer_nav {
+    display: flex;
+    min-width: toRem(200px);
+    justify-content: space-between;
+    flex-direction: row-reverse;
+
+    .picture__move {
+      display: flex;
+      justify-content: space-between;
+      width: toRem(160px);
+
+      .left__item {
+        display: flex;
+        background-color: $primar-color-border;
+        width: toRem(60px);
+        height: toRem(60px);
+        justify-content: center;
+        align-items: center;
+        border-radius: 12px;
+      }
+
+      .right__item {
+        display: flex;
+        background-color: $input-font-color;
+        width: toRem(60px);
+        height: toRem(60px);
+        justify-content: center;
+        align-items: center;
+        border-radius: 12px;
+      }
+    }
+  }
+
+  .Offer_content {
+    display: flex;
+  flex-direction: row;
+    justify-content: space-between;
+
+  .Offer__item {
+    background-color: $background-color-for-offer;
+    width: toRem(497px);
+    height: toRem(629px);
+    border-radius: 25px;
+
+    &-picture:nth-child(1) {
+      height:toRem(286px);
+      width: toRem(497px);
+      background-image: url("#{$imgs-path}/city-image.jpg");
+      border-top-left-radius: 26px;
+      border-top-right-radius: 26px;
+    }
+  }
+}
 }

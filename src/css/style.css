@@ -559,9 +559,52 @@ html, body {
   background-color: #FF7757;
 }
 
-.Offer_nav {
-  justify-content: flex-end;
+.popular .Offer_nav {
   display: flex;
+  min-width: 12.5rem;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+}
+.popular .Offer_nav .picture__move {
+  display: flex;
+  justify-content: space-between;
+  width: 10rem;
+}
+.popular .Offer_nav .picture__move .left__item {
+  display: flex;
+  background-color: #FF7757;
+  width: 3.75rem;
+  height: 3.75rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+}
+.popular .Offer_nav .picture__move .right__item {
+  display: flex;
+  background-color: #172432;
+  width: 3.75rem;
+  height: 3.75rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+}
+.popular .Offer_content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.popular .Offer_content .Offer__item {
+  background-color: #FFF8F1;
+  width: 31.0625rem;
+  height: 39.3125rem;
+  border-radius: 25px;
+}
+.popular .Offer_content .Offer__item-picture:nth-child(1) {
+  height: 17.875rem;
+  width: 31.0625rem;
+  background-image: url("../images/city-image.jpg");
+  border-top-left-radius: 26px;
+  border-top-right-radius: 26px;
 }
 
 /*# sourceMappingURL=style.css.map */
