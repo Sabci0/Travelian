@@ -257,6 +257,8 @@
 }
 
 .Offer{
+  display: flex;
+  flex-direction: row-reverse;
   margin-top: toRem(140px);
   font-size: toRem(64px);
   font-family: "Playfair Display";
@@ -270,4 +272,8 @@
     display: block;
     background-color: $primar-color-border;
   }
+}
+.Offer_nav{
+  justify-content: flex-end;
+  display: flex;
 }
