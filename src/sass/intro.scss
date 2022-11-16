@@ -279,52 +279,204 @@
     min-width: toRem(200px);
     justify-content: space-between;
     flex-direction: row-reverse;
+    padding-bottom: toRem(100px);
 
-    .picture__move {
-      display: flex;
-      justify-content: space-between;
-      width: toRem(160px);
 
-      .left__item {
-        display: flex;
-        background-color: $primar-color-border;
-        width: toRem(60px);
-        height: toRem(60px);
-        justify-content: center;
-        align-items: center;
-        border-radius: 12px;
-      }
-
-      .right__item {
-        display: flex;
-        background-color: $input-font-color;
-        width: toRem(60px);
-        height: toRem(60px);
-        justify-content: center;
-        align-items: center;
-        border-radius: 12px;
-      }
-    }
   }
 
   .Offer_content {
     display: flex;
-  flex-direction: row;
+    flex-direction: row;
     justify-content: space-between;
 
-  .Offer__item {
-    background-color: $background-color-for-offer;
-    width: toRem(497px);
-    height: toRem(629px);
-    border-radius: 25px;
+    .Offer__item {
+      background-color: $background-color-for-offer;
+      width: toRem(497px);
+      height: toRem(629px);
+      border-radius: 25px;
 
-    &-picture:nth-child(1) {
-      height:toRem(286px);
+      .city-name {
+        line-height: toRem(35px);
+        padding: toRem(40px) toRem(24px);
+        font-family: 'Mulish', sans-serif;
+        color: $secondary-color-font;
+        font-weight: 400;
+      }
+
+      .Offer__caption {
+        font-weight: 400;
+        font-family: Rubik, sans-serif;
+        font-size: 18px;
+        margin: toRem(24px);
+      }
+
+      .Offer__footer {
+        display: flex;
+        justify-content: space-between;
+        margin: toRem(24px);
+
+        .price__name {
+          font-family: Rubik, sans-serif;
+          font-weight: 400;
+          color: $secondary-color-font;
+          font-size: toRem(20px);
+          line-height: toRem(24px);
+
+          .price__bolt {
+            color: $primar-color-border;
+            font-family: Rubik, sans-serif;
+            font-weight: 400;
+
+          }
+        }
+
+        .Offer__button {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          padding: toRem(20px) toRem(40px);
+          background-color: $primar-color-border;
+          border-radius: 12px;
+          font-family: Rubik, sans-serif;
+          color: $secondary-color;
+          border-color: $secondary-color;
+        }
+      }
+    }
+    .Offer__item:nth-child(1) .Offer__item-picture {
+      height: toRem(286px);
       width: toRem(497px);
       background-image: url("#{$imgs-path}/city-image.jpg");
       border-top-left-radius: 26px;
       border-top-right-radius: 26px;
     }
+
+    .Offer__item:nth-child(2) .Offer__item-picture {
+      height: toRem(286px);
+      width: toRem(497px);
+      background-image: url("#{$imgs-path}/city-imag-1.jpg");
+      border-top-left-radius: 26px;
+      border-top-right-radius: 26px;
+    }
+
+    .Offer__item:nth-child(3) .Offer__item-picture {
+      height: toRem(286px);
+      width: toRem(497px);
+      background-image: url("#{$imgs-path}/city-image-2.jpg");
+      border-top-left-radius: 26px;
+      border-top-right-radius: 26px;
+    }
   }
 }
+.picture__move {
+  display: flex;
+  justify-content: space-between;
+  width: toRem(160px);
+
+  .left__item {
+    display: flex;
+    background-color: $primar-color-border;
+    width: toRem(60px);
+    height: toRem(60px);
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+  }
+
+  .right__item {
+    display: flex;
+    background-color: $input-font-color;
+    width: toRem(60px);
+    height: toRem(60px);
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+  }
 }
+
+.entry{
+  height: toRem(873px);
+  display: flex;
+  justify-content: center;
+  .image{
+    background-image: url("#{$imgs-path}/Blog_image.jpg");
+    height: 100%;
+    width: toRem(762px);
+    border-radius: toRem(26px);
+  }
+  .content{
+    padding: toRem(32px);
+    text-align: left;
+    width: toRem(762px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .title{
+      color: $input-font-color;
+      font-family: "Playfair Display";
+      font-weight: 400;
+      font-size: toRem(54px);
+
+    }
+    .entry__content{
+      font-family: Rubik, sans-serif;
+      font-weight: 400;
+      line-height: toRem(52px);
+    }
+    .read__more{
+      color:$primar-color-border;
+      font-family: Rubik, sans-serif;
+      text-decoration: none;
+    }
+  }
+}
+.Trip{
+  padding-bottom: toRem(140px);
+  padding-top: toRem(140px);
+  display: flex;
+  justify-content: space-between;
+  height: toRem(545px);
+  &__content{
+    margin-right: toRem(100px);
+    width: toRem(394px);
+    &{
+      width: 100%;
+      font-weight: 400;
+      font-size: toRem(64px);
+      line-height: toRem(85px);
+      color: $third-color-font;
+
+      .destinations {
+        
+      }
+    }
+  }
+  &__gallery{
+    display: flex;
+    .Trip__gallery-item{
+      border-radius: 26px;
+      margin: auto toRem(16px);
+      width: toRem(300px);
+      height: toRem(399px);
+    }
+    &-item:nth-child(1){
+      background-image: url("#{$imgs-path}/galery-hover-1.jpg");
+
+    }
+    &-item:nth-child(2){
+      background-image: url("#{$imgs-path}/galery-hover-2.jpg");
+
+    }
+    &-item:nth-child(3){
+      background-image: url("#{$imgs-path}/galery-hover-3.jpg");
+
+    }
+    &-item:nth-child(4){
+      background-image: url("#{$imgs-path}/galery-hover-4.jpg");
+
+    }
+  }
+}
+
+
