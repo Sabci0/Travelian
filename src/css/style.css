@@ -712,21 +712,101 @@ html, body {
   margin-right: 6.25rem;
   width: 24.625rem;
 }
-.Trip__content {
-  width: 100%;
+.Trip__content__title {
+  width: 24.625rem;
   font-weight: 400;
   font-size: 4rem;
   line-height: 5.3125rem;
   color: #172432;
+}
+.Trip__content__title::before {
+  content: "";
+  position: absolute;
+  bottom: 0.375rem;
+  left: 0.625rem;
+  width: calc(100% - 1.25rem);
+  height: 0.1875rem;
+  display: block;
+  background-color: #FF7757;
+}
+.Trip__content .description {
+  font-family: Rubik, sans-serif;
+  color: #767E86;
+}
+.Trip__content .View__all {
+  background-color: #FF7757;
+  color: #FFF;
+  font-family: Rubik, sans-serif;
+  line-height: 1.3125rem;
+  width: 11.625rem;
+  height: 3.8125rem;
+  border-radius: 0.75rem;
+  border-color: #FF7757;
+}
+.Trip__content .View__all::before {
+  content: " j ";
+  width: 2.6875rem;
+  height: 2.6875rem;
+  background-color: #000;
+  position: absolute;
+  bottom: 0.375rem;
+  left: 0.625rem;
+  display: block;
 }
 .Trip__gallery {
   display: flex;
 }
 .Trip__gallery .Trip__gallery-item {
   border-radius: 26px;
-  margin: auto 1rem;
+  margin: 4.5625rem 1rem;
   width: 18.75rem;
   height: 24.9375rem;
+}
+.Trip__gallery .Trip__gallery-item .Trip__hover {
+  display: none;
+}
+.Trip__gallery .Trip__gallery-item:hover {
+  margin-top: 0;
+  display: flex;
+}
+.Trip__gallery .Trip__gallery-item:hover .Trip__hover {
+  padding: 0.375rem 0;
+  width: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  top: 25rem;
+  color: #767E86;
+  font-family: Rubik, sans-serif;
+  height: 9.125rem;
+}
+.Trip__gallery .Trip__gallery-item:hover .Trip__hover__tour {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.Trip__gallery .Trip__gallery-item:hover .Trip__hover__tour .title__tour {
+  text-transform: uppercase;
+}
+.Trip__gallery .Trip__gallery-item:hover .Trip__hover-title {
+  line-height: 2.3125rem;
+  font-family: "Playfair Display";
+  font-weight: 600;
+  font-size: 1.75rem;
+}
+.Trip__gallery .Trip__gallery-item:hover .Trip__hover__rating {
+  height: 1.5rem;
+  padding: 0 0.375rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.Trip__gallery .Trip__gallery-item:hover .Trip__hover__rating .rating {
+  margin-top: auto;
+  margin-bottom: auto;
+  padding-left: 0;
 }
 .Trip__gallery-item:nth-child(1) {
   background-image: url("../images/galery-hover-1.jpg");

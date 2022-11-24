@@ -1,5 +1,6 @@
 $base-font-size:16px;
 
+$black-color:#000;
 $primar-color-border:#FF7757;
 $secondary-color:#FFF;
 $secondary-color-font:#767E86;
@@ -8,6 +9,8 @@ $primary-font-color:#FFF;
 $third-color-font:#172432;
 $background-color-for-offer: #FFF8F1;
 $imgs-path:'../images';
+$font-family-text: Rubik, sans-serif;
+$font-family-titles: 'Playfair Display';
 
 html, body{
   font-size: $base-font-size;
