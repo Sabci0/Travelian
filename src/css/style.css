@@ -470,6 +470,7 @@ html, body {
   width: 100%;
 }
 .popular .destinations {
+  font-weight: 400;
   margin-top: 8.75rem;
   font-size: 4rem;
   font-family: "Playfair Display";
@@ -477,15 +478,27 @@ html, body {
 .popular .destinations::before {
   content: "";
   position: absolute;
-  bottom: -14.875rem;
+  bottom: -15.625rem;
   left: 3.125rem;
-  width: calc(10% - 1.25rem);
+  width: calc(21% - 1.25rem);
   height: 0.1875rem;
   display: block;
   background-color: #FF7757;
 }
 .popular .inscription_nav {
   margin-bottom: 6.25rem;
+  display: flex;
+  justify-content: space-between;
+}
+.popular .inscription_nav .description {
+  font-family: Rubik, sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 1.7775rem;
+  color: #767E86;
+}
+.popular .inscription_nav .picture__move .left__item {
+  transform: rotate(180deg);
 }
 .popular .places {
   display: flex;
@@ -547,16 +560,16 @@ html, body {
   margin-top: 8.75rem;
   font-size: 4rem;
   font-family: "Playfair Display";
-}
-.Offer::before {
-  content: "";
-  position: absolute;
-  bottom: -14.875rem;
-  left: 3.125rem;
-  width: calc(10% - 1.25rem);
-  height: 0.1875rem;
-  display: block;
-  background-color: #FF7757;
+  /* &::before {
+    content: '';
+    position: absolute;
+    bottom: toRem(-238px);
+    left: toRem(50px);
+    width: calc(10% - toRem(20px));
+    height: toRem(3px);
+    display: block;
+    background-color: $primar-color-border;
+  } */
 }
 
 .popular .Offer_nav {
@@ -718,16 +731,16 @@ html, body {
   font-size: 4rem;
   line-height: 5.3125rem;
   color: #172432;
-}
-.Trip__content__title::before {
-  content: "";
-  position: absolute;
-  bottom: 0.375rem;
-  left: 0.625rem;
-  width: calc(100% - 1.25rem);
-  height: 0.1875rem;
-  display: block;
-  background-color: #FF7757;
+  /* &::before {
+     content: '';
+     position: absolute;
+     bottom: toRem(6px);
+     left: toRem(10px);
+     width: calc(100% - toRem(20px));
+     height: toRem(3px);
+     display: block;
+     background-color: $primar-color-border;
+   } */
 }
 .Trip__content .description {
   font-family: Rubik, sans-serif;
@@ -741,17 +754,36 @@ html, body {
   width: 11.625rem;
   height: 3.8125rem;
   border-radius: 0.75rem;
-  border-color: #FF7757;
+  border: 0;
+  padding: 0;
+  position: sticky;
+}
+.Trip__content .View__all-content {
+  padding: 1.25rem;
+  color: #FFF;
+  margin: 0;
 }
 .Trip__content .View__all::before {
-  content: " j ";
+  content: "";
   width: 2.6875rem;
   height: 2.6875rem;
   background-color: #000;
   position: absolute;
-  bottom: 0.375rem;
-  left: 0.625rem;
+  top: -0.90625rem;
+  left: -0.875rem;
   display: block;
+  margin: 0;
+}
+.Trip__content .View__all::after {
+  content: "";
+  width: 2.6875rem;
+  height: 2.6875rem;
+  background-color: #767E86;
+  position: absolute;
+  bottom: -0.90625rem;
+  right: -0.875rem;
+  display: block;
+  margin: 0;
 }
 .Trip__gallery {
   display: flex;

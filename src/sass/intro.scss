@@ -184,22 +184,39 @@
   max-width: toRem(1556px);
   width: 100%;
   .destinations{
+    font-weight: 400;
     margin-top: toRem(140px);
     font-size: toRem(64px);
     font-family: "Playfair Display";
     &::before {
       content: '';
       position: absolute;
-      bottom: toRem(-238px);
+      bottom: toRem(-250px);
       left: toRem(50px);
-      width: calc(10% - toRem(20px));
+      width: calc(21% - toRem(20px));
       height: toRem(3px);
       display: block;
       background-color: $primar-color-border;
     }
+
   }
   .inscription_nav{
     margin-bottom: toRem(100px);
+    display: flex;
+    justify-content: space-between;
+
+    .description{
+      font-family: $font-family-text;
+      font-weight: 400;
+      font-size: toRem(24px);
+      line-height: toRem(28.44px);
+      color: $secondary-color-font;
+    }
+    .picture__move{
+      .left__item{
+        transform: rotate(180deg);
+      }
+    }
   }
   .places{
     display: flex;
@@ -262,7 +279,7 @@
   margin-top: toRem(140px);
   font-size: toRem(64px);
   font-family: "Playfair Display";
-  &::before {
+  /* &::before {
     content: '';
     position: absolute;
     bottom: toRem(-238px);
@@ -271,7 +288,7 @@
     height: toRem(3px);
     display: block;
     background-color: $primar-color-border;
-  }
+  } */
 }
 .popular {
   .Offer_nav {
@@ -446,7 +463,7 @@
       font-size: toRem(64px);
       line-height: toRem(85px);
       color: $third-color-font;
-      &::before {
+     /* &::before {
         content: '';
         position: absolute;
         bottom: toRem(6px);
@@ -455,7 +472,7 @@
         height: toRem(3px);
         display: block;
         background-color: $primar-color-border;
-      }
+      } */
     }
     .description {
       font-family: $font-family-text;
@@ -469,16 +486,35 @@
       width: toRem(186px);
       height: toRem(61px);
       border-radius: toRem(12px);
-      border-color: $primar-color-border;
+      border: 0;
+      padding: 0;
+      position: sticky;
+      &-content{
+        padding: toRem(20px);
+        color: $secondary-color;
+        margin: 0;
+      }
       &::before{
-        content: ' j ';
+        content: '';
         width: toRem(43px);
         height: toRem(43px);
         background-color: $black-color;
         position: absolute;
-        bottom: toRem(6px);
-        left: toRem(10px);
+        top: toRem(-14.5px);
+        left: toRem(-14px);
         display: block;
+        margin: 0;
+      }
+      &::after{
+        content: '';
+        width: toRem(43px);
+        height: toRem(43px);
+        background-color: $secondary-color-font;
+        position: absolute;
+        bottom: toRem(-14.5px);
+        right: toRem(-14px);
+        display: block;
+        margin: 0;
       }
     }
   }
