@@ -959,6 +959,8 @@ html, body {
 }
 
 .relative .send {
+  position: relative;
+  top: 20.625rem;
   width: 78.875rem;
   height: 14.5rem;
   border-radius: 1.625rem;
@@ -966,6 +968,7 @@ html, body {
   padding: 3.75rem 5rem;
   display: flex;
   justify-content: space-between;
+  background-color: #FFF;
 }
 .relative .send__title {
   color: #767E86;
@@ -1009,6 +1012,16 @@ html, body {
 }
 
 .footer {
+  padding-top: 15rem;
+  height: 34.8125rem;
+  margin: 0;
+  min-width: 100%;
+  background-position: center;
+  background-size: cover;
+  justify-content: space-around;
+  align-items: center;
+  padding-bottom: 6.25rem;
+  box-sizing: border-box;
   background-color: #172432;
   color: #FFF;
   width: 100%;
@@ -1030,8 +1043,19 @@ html, body {
   text-decoration: none;
   color: #FFF;
 }
+.footer__follow {
+  width: 13rem;
+}
 .footer__follow-title {
   font-weight: 500;
+}
+.footer__follow__follow {
+  display: flex;
+  justify-content: space-between;
+}
+.footer__follow__follow .follow {
+  width: 2rem;
+  height: 2rem;
 }
 
 /*# sourceMappingURL=style.css.map */

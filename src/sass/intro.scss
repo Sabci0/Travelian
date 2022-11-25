@@ -711,6 +711,8 @@
   }
 .relative{
   .send{
+    position: relative;
+    top: toRem(330px);
     width: toRem(1262px);
     height: toRem(232px);
     border-radius: toRem(26px);
@@ -718,6 +720,7 @@
     padding: toRem(60px) toRem(80px);
     display: flex;
     justify-content: space-between;
+    background-color: $secondary-color;
     &__title{
       color:$secondary-color-font;
       font-family: $font-family-titles ;
@@ -764,6 +767,16 @@
   }
 }
 .footer{
+  padding-top:toRem(240px) ;
+  height: toRem(557px);
+  margin: 0;
+  min-width: 100%;
+  background-position:center ;
+  background-size: cover;
+  justify-content: space-around;
+  align-items: center;
+  padding-bottom: toRem(100px);
+  box-sizing: border-box;
   background-color: $input-font-color;
   color: $secondary-color;
   width: 100%;
@@ -789,8 +802,18 @@
   }
   &__follow{
 
+    width: toRem(208px);
+
     &-title{
       font-weight: 500;
+    }
+    &__follow{
+      display: flex;
+      justify-content: space-between;
+      .follow{
+        width: toRem(32px);
+        height: toRem(32px);
+      }
     }
   }
 }
