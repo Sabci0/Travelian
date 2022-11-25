@@ -980,11 +980,58 @@ html, body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  font-family: Rubik, sans-serif;
+  width: 35.4375rem;
+}
+.relative .send__content-desc {
+  color: #767E86;
 }
 .relative .send__content__form {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+.relative .send__content__form-input {
+  color: #FF7757;
+  background-color: #FFE8D4;
+  width: 23.25rem;
+  height: 4.5625rem;
+  border-color: #FFE8D4;
+  border-radius: 0.75rem;
+}
+.relative .send__content__form-button {
+  width: 10.1875rem;
+  height: 4.5625rem;
+  color: #FFF;
+  border-radius: 0.75rem;
+  background-color: #FF7757;
+  border-color: #FF7757;
+}
+
+.footer {
+  background-color: #172432;
+  color: #FFF;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-family: Rubik, sans-serif;
+}
+.footer__lists {
+  display: flex;
+  flex-direction: column;
+}
+.footer__lists-title {
+  font-weight: 500;
+}
+.footer__lists-item {
+  font-weight: 400;
+  text-transform: none;
+  text-decoration: none;
+  color: #FFF;
+}
+.footer__follow-title {
+  font-weight: 500;
 }
 
 /*# sourceMappingURL=style.css.map */

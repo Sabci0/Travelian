@@ -731,7 +731,10 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
+      font-family: $font-family-text;
+      width: toRem(567px);
       &-desc{
+        color: $secondary-color-font;
 
       }
       &__form{
@@ -739,15 +742,56 @@
         flex-direction: row;
         justify-content: space-between;
 
-        &-input{
 
+        &-input{
+          color: $primar-color-border;
+          background-color: $background-email-color;
+          width: toRem(372px);
+          height: toRem(73px);
+          border-color: $background-email-color;
+          border-radius: toRem(12px);
         }
         &-button{
-
+          width: toRem(163px);
+          height: toRem(73px);
+          color: $secondary-color ;
+          border-radius: toRem(12px);
+          background-color: $primar-color-border;
+          border-color: $primar-color-border;
         }
       }
     }
   }
 }
+.footer{
+  background-color: $input-font-color;
+  color: $secondary-color;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-family: $font-family-text;
+  &__logo{
 
+  }
+  &__lists{
+    display: flex;
+    flex-direction: column;
+    &-title{
+      font-weight: 500;
+    }
+    &-item{
+      font-weight: 400;
+      text-transform: none;
+      text-decoration: none;
+      color: $secondary-color;
+    }
+  }
+  &__follow{
+
+    &-title{
+      font-weight: 500;
+    }
+  }
+}
 
