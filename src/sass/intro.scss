@@ -709,5 +709,45 @@
     }
   }
   }
+.relative{
+  .send{
+    width: toRem(1262px);
+    height: toRem(232px);
+    border-radius: toRem(26px);
+    border: toRem(1px) solid $secondary-color-font ;
+    padding: toRem(60px) toRem(80px);
+    display: flex;
+    justify-content: space-between;
+    &__title{
+      color:$secondary-color-font;
+      font-family: $font-family-titles ;
+      font-size: toRem(64px);
+      font-weight: 400;
+      line-height: toRem(85.31px);
+      display: flex;
+      justify-content: flex-start;
+    }
+    &__content{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      &-desc{
+
+      }
+      &__form{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        &-input{
+
+        }
+        &-button{
+
+        }
+      }
+    }
+  }
+}
 
 
