@@ -1,0 +1,93 @@
+@use "sass:math";
+@import "variables";
+@import "helpers";
+
+.blog{
+  margin: toRem(306px) 0 0 0;
+
+  &__hdl{
+    @extend %hdl-typography;
+    position: relative;
+    margin: 0 0 toRem(68px) 0;
+
+    &::after{
+      position: absolute;
+      content: "";
+      background-color: $primary-color-border;
+      margin: 0;
+      padding: 0;
+      height: toRem(3px);
+      width: toRem(150px);
+      left: 0;
+      bottom: toRem(-32px);
+    }
+  }
+  &__subhdl{
+    @extend %subhdl-typography;
+  }
+
+  .post{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: toRem(106px) 0 0 0;
+
+    &__photo{
+      width: toRem($long-space-px*6 + $short-space-px*5);
+    }
+
+    &__img{
+      width: 100%;
+      border-radius:20px;
+      filter: brightness(.8);
+    }
+
+    &__content {
+      width: toRem($long-space-px*6 + $short-space-px*5);
+      margin: 0 0 0 $short-space-px;
+    }
+
+    &__text {
+      font-family: Rubik, sans-serif;
+      font-size: toRem(24px);
+      line-height: math.div(52, 24);
+      font-weight: 400;
+      color: $input-font-color;
+    }
+
+    &__read-more{
+      display: flex;
+      align-items: center;
+      width: toRem(165px);
+      justify-content: space-between;
+      font-family: Rubik, sans-serif;
+      font-size: toRem(24px);
+      line-height: math.div(52, 24);
+      font-weight: 400;
+      color: $primary-color-border;
+      cursor: pointer;
+      transition: all 100ms;
+
+      &:hover{
+        transform: translateY(-.3rem);
+        transition: all 100ms;
+        &::after{
+          transform: translateX(.5rem);
+        }
+      }
+
+      &::after{
+        content: "";
+        display: inline-block;
+        width: toRem(40px);
+        height: toRem(27px);
+        background-color: $primary-color-border;
+        transform: scale(.6);
+        -webkit-mask:url('#{$imgs-path}/arow.svg') no-repeat;
+        -webkit-mask-size: contain;
+      }
+
+    }
+  }
+
+}
