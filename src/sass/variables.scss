@@ -1,11 +1,20 @@
-$base-font-size:16px;
+@use "sass:math";
+@import "helpers";
 
+$base-font-size:16px;
+$short-space-px: 34px;
+$long-space-px: 99px;
+$full-width-px: $short-space-px * 11 + $long-space-px * 12;
 $black-color:#000;
-$primar-color-border:#FF7757;
+$primary-color:#FF7757;
+$form-bg-color:#FFE8D4FF;
 $secondary-color:#FFF;
 $secondary-color-font:#767E86;
 $input-font-color:#172432;
+$testimonal-bg-color: #F5F6F7FF;
+$tertiary-font-color: #172432FF;
 $primary-font-color:#FFF;
+$offer-bg-color: #fff8f1;
 $third-color-font:#172432;
 $background-color-for-offer: #FFF8F1;
 $imgs-path:'../images';
@@ -15,4 +24,39 @@ $background-comment-color:#F5F6F7;
 
 html, body{
   font-size: $base-font-size;
+}
+
+%menu-item{
+  font-family: Rubik, sans-serif;
+  font-weight: 400;
+  font-size: toRem(20px);
+  line-height: math.div(20, 24);
+  color: $primary-font-color;
+  text-decoration: none;
+}
+
+%hdl-typography{
+  font-family: "Playfair Display",serif;
+  font-weight: 400;
+  font-size: toRem(64px);
+  line-height: math.div(64, 85);
+  color: $tertiary-font-color;
+  text-decoration: none;
+}
+
+%subhdl-typography{
+  font-family: Rubik, sans-serif;
+  font-weight: 400;
+  font-size: toRem(24px);
+  line-height: math.div(24, 28);
+  color: $secondary-color-font;
+  text-decoration: none;
+}
+
+%footer-menu-typography{
+  font-family: Rubik, sans-serif;
+  font-size: toRem(18px);
+  line-height: math.div(18, 21);
+  color: $primary-font-color;
+  text-decoration: none;
 }
