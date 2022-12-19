@@ -1218,7 +1218,7 @@ html, body {
   line-height: 1.1666666667;
   color: #172432;
 }
-.offer .carousel__item .price-1__wrapper {
+.offer .carousel__item .price-l__wrapper {
   display: flex;
   justify-content: space-between;
   margin: 0 1.5rem 2.375rem 1.5rem;
@@ -1313,6 +1313,13 @@ html, body {
 }
 .planners .sidebar__txt {
   font-family: Rubik, sans-serif;
+  font-weight: 400;
+  font-size: 1.125rem;
+  line-height: 1.1666666667;
+  color: #767E86;
+}
+.planners .sidebar__btn {
+  font-family: Rubik, sans-serif;
   background-color: #FF7757;
   font-weight: 400;
   font-size: 1.125rem;
@@ -1325,13 +1332,13 @@ html, body {
   z-index: 10;
   cursor: pointer;
 }
-.planners .sidebar__txt:hover {
+.planners .sidebar__btn:hover {
   transform: scale(1.1);
 }
 .planners .sidebar .btn-l__wrapper {
   display: inline-block;
   position: relative;
-  margin: 3.375rem 16.75rem 0 2.5rem;
+  margin: 3.375rem 268px 0 40px;
   width: 11.625rem;
 }
 .planners .sidebar .btn-l__wrapper::before {
@@ -1353,11 +1360,11 @@ html, body {
   width: 2.6875rem;
   height: 2.6875rem;
   z-index: -1;
-  top: -30%;
-  left: -10%;
+  bottom: -30%;
+  right: -10%;
 }
 .planners .carousel {
-  display: inline-block;
+  display: inline-flex;
 }
 .planners .carousel__item {
   width: 18.75rem;
