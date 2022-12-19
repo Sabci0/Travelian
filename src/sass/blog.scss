@@ -13,7 +13,7 @@
     &::after{
       position: absolute;
       content: "";
-      background-color: $primary-color-border;
+      background-color: $primary-color;
       margin: 0;
       padding: 0;
       height: toRem(3px);
@@ -42,6 +42,14 @@
       filter: brightness(.8);
     }
 
+    &__hdl {
+      font-family: "Playfair Display", serif;
+      color: $tertiary-font-color;
+      font-size: toRem(54px);
+      font-weight: 400;
+      line-height: math.div(72, 54);
+    }
+
     &__content {
       width: toRem($long-space-px*6 + $short-space-px*5);
       margin: 0 0 0 $short-space-px;
@@ -64,7 +72,7 @@
       font-size: toRem(24px);
       line-height: math.div(52, 24);
       font-weight: 400;
-      color: $primary-color-border;
+      color: $primary-color;
       cursor: pointer;
       transition: all 100ms;
 
@@ -81,7 +89,7 @@
         display: inline-block;
         width: toRem(40px);
         height: toRem(27px);
-        background-color: $primary-color-border;
+        background-color: $primary-color;
         transform: scale(.6);
         -webkit-mask:url('#{$imgs-path}/arow.svg') no-repeat;
         -webkit-mask-size: contain;

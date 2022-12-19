@@ -1,0 +1,163 @@
+@use "sass:math";
+@import "variables";
+@import "helpers";
+
+.planners {
+  display: flex;
+  align-items: center;
+  margin: toRem(355px) 0 0 0;
+
+  .sidebar {
+    width: toRem($long-space-px * 4 + $short-space-px * 3);
+
+    &__hdl {
+      @extend %hdl-typography;
+      position: relative;
+      margin: 0 0 toRem(78px) 0;
+
+      &::after {
+        position: absolute;
+        content: "";
+        background-color: $primary-color;
+        height: toRem(3px);
+        width: toRem($long-space-px * 2 + $short-space-px);
+        left: 0;
+        bottom: - toRem(33px);
+      }
+    }
+
+    &__txt {
+      font-family: Rubik, sans-serif;
+      font-weight: 400;
+      font-size: toRem(18px);
+      line-height: math.div(21, 18);
+      color: $secondary-color-font;
+    }
+
+    &__btn {
+      font-family: Rubik, sans-serif;
+      background-color: $primary-color;
+      font-weight: 400;
+      font-size: toRem(18px);
+      line-height: math.div(21, 18);
+      color: $primary-font-color;
+      padding: toRem(20px);
+      border: none;
+      border-radius: 15px;
+      position: static;
+      z-index: 10;
+      cursor: pointer;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+    .btn-l__wrapper {
+      display: inline-block;
+      position: relative;
+      margin: toRem(54px) 268px 0 40px;
+      width: toRem(186px);
+
+      &::before {
+        display: inline-block;
+        position: absolute;
+        content: "";
+        background-color: $tertiary-font-color;
+        width: toRem(43px);
+        height: toRem(43px);
+        z-index: -1;
+        top: -25%;
+        left: -10%;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        display: inline-block;
+        background-color: $secondary-color-font;
+        width: toRem(43px);
+        height: toRem(43px);
+        z-index: -1;
+        top: -30%;
+        left: -10%;
+      }
+    }
+  }
+
+  .carousel {
+    display: inline-flex;
+
+    &__item {
+      width: toRem($long-space-px * 2 + $short-space-px * 3);
+      margin: 0 toRem($short-space-px) 0 0;
+      transition: all 400ms;
+
+      &__img {
+        width: 100%;
+        border-radius: 30px;
+        filter: brightness(.8);
+      }
+
+      &:hover {
+        transform: translateY(-3rem);
+
+        .active-l__item {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+      .active-l__item {
+        transition: all 400ms;
+        visibility: hidden;
+        opacity: 0;
+
+        &__header {
+          display: flex;
+          justify-content: space-between;
+          margin: toRem(21px) 0;
+          font-family: Rubik, sans-serif;
+          font-weight: 400;
+          font-size: toRem(18px);
+          line-height: math.div(21, 18);
+          color: $tertiary-font-color;
+        }
+
+        &__footer {
+          display: flex;
+          justify-content: space-between;
+          margin: toRem(21px) 0;
+        }
+      }
+
+      &__hdl {
+        text-transform: uppercase;
+      }
+
+      &__price {
+      }
+
+      &__location {
+        font-family: "Playfair Display", serif;
+        font-weight: 600;
+        color: $tertiary-font-color;
+        font-size: toRem(28px);
+        line-height: math.div(37, 28);
+      }
+
+      &__rating {
+        background-image: url("#{$imgs-path}/star.svg");
+        background-repeat: repeat-x;
+        height: 24px;
+        width: 5 * 27px;
+      }
+
+      &__details {
+        font-family: Rubik, sans-serif;
+        font-weight: 400;
+        font-size: toRem(18px);
+        line-height: math.div(21, 18);
+        color: $tertiary-font-color;
+      }
+    }
+  }
+}

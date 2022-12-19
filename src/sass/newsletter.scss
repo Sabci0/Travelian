@@ -1,0 +1,84 @@
+@use "sass:math";
+@import "variables";
+@import "helpers";
+
+.newsletter{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  background-color: $primary-font-color;
+  width: toRem($long-space-px * 10 + $short-space-px * 9);
+  margin: toRem(126px) auto -6rem;
+  border-radius: 26px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+  &__hdl {
+    font-family: "Playfair Display", serif;
+    font-weight: 400;
+    text-decoration: none;
+    color: $secondary-color-font;
+    font-size: toRem(64px);
+    line-height: math.div(85, 64);
+  }
+
+  .newsletter-l__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: toRem(60px) 0;
+  }
+
+  &__group {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  &__lbl {
+    font-family: Rubik, sans-serif;
+    font-weight: 400;
+    color: $secondary-color-font;
+    font-size: toRem(20px);
+    line-height: math.div(24, 20);
+    text-decoration: none;
+  }
+
+  &__email {
+    margin: toRem(20px) toRem($short-space-px) 0 0;
+    font-family: Rubik, sans-serif;
+    font-size: toRem(20px);
+    font-weight: 400;
+    line-height: math.div(24, 20);
+    text-decoration: none;
+    color: $primary-color;
+    background-color: $form-bg-color;
+    border: none;
+    border-radius: 24px;
+    padding: toRem(24px) toRem(40px);
+
+    &::placeholder {
+      color: $primary-color;
+      text-align: left;
+    }
+  }
+
+  &__btn {
+    height: toRem(73px);
+    border: none;
+    background-color: $primary-color;
+    font-family: Rubik, sans-serif;
+    font-size: toRem(20px);
+    line-height: math.div(24, 20);
+    font-weight: 400;
+    text-decoration: none;
+    color: $primary-font-color;
+    padding: toRem(24px) toRem(40px);
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 200ms;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}

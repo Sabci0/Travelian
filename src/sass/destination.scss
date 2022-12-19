@@ -1,0 +1,106 @@
+@use "sass:math";
+@import "variables";
+@import "helpers";
+
+.destinations {
+  margin-top: toRem(160px);
+  width: 100%;
+
+  &__hdl {
+    @extend  %hdl-typography;
+    position: relative;
+    margin: 0;
+
+    &::after {
+      display: inline-block;
+      content: "";
+      height: 3px;
+      width: toRem($long-space-px*3 + $short-space-px*2);
+      background-color: $primary-color;
+      position: absolute;
+      left: 0;
+      bottom: - toRem(33px);
+    }
+  }
+  .subhdl-l__wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin: toRem(32px) 0 0 0;
+  }
+
+  &__text {
+    @extend %subhdl-typography;
+  }
+
+  .carousel {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    max-width: toRem($full-width-px) * math.div(4.02, 3);
+    width: 100vw * math.div(4, 3);
+    margin: toRem(76px) 0 0 0;
+    padding: 0;
+
+    &__item {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      position: relative;
+      max-height: toRem(661px);
+      max-width:  toRem($long-space-px * 4 + $short-space-px * 3);
+      width: 30vw;
+      aspect-ratio: math.div($short-space-px * 4 + $short-space-px * 3, 661px);
+      margin: 0;
+      padding: 0;
+      transition: all 200ms;
+      cursor: pointer;
+
+      &:hover {
+        filter: sepia(50%)
+      }
+
+      &__img {
+        position: absolute;
+        border-radius: 30px;
+        filter: sepia(0.2);
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      &__hdl {
+        color: $primary-font-color;
+        font-family: "Playfair Display", sans-serif;
+        font-size: toRem(28px);
+        font-weight: 500;
+        line-height: 1.32;
+        z-index: 10;
+        margin: 0 2rem 0;
+      }
+
+      &__location {
+        display: flex;
+        color: $primary-font-color;
+        font-family: Rubik, sans-serif;
+        font-size: toRem(24px);
+        font-weight: 400;
+        z-index: 10;
+        margin: 1rem 1rem 2rem;
+
+        &::before {
+          display: inline-block;
+          width: toRem(24px);
+          height: toRem(24px);
+          content: "";
+          background-image: url("#{$imgs-path}/location.svg");
+          background-position: center;
+          background-size: cover;
+          margin-inline: 1rem;
+        }
+      }
+    }
+  }
+}
