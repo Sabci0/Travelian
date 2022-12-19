@@ -1205,7 +1205,7 @@ html, body {
 }
 .offer .carousel__item__rating {
   height: 1.5rem;
-  width: 135px;
+  width: 120px;
   background-image: url("../images/star.svg");
   background-repeat: repeat-x;
   margin: 0.3125rem 1.5rem 1.6875rem 1.5rem;
@@ -1417,7 +1417,7 @@ html, body {
   background-image: url("../images/star.svg");
   background-repeat: repeat-x;
   height: 24px;
-  width: 135px;
+  width: 120px;
 }
 .planners .carousel__item__details {
   font-family: Rubik, sans-serif;
@@ -1509,7 +1509,7 @@ html, body {
 .testimonial .carousel__item__rating {
   margin: 1.25rem 0 0 0;
   height: 24px;
-  width: 135px;
+  width: 120px;
   background-image: url("../images/star.svg");
   background-repeat: repeat-x;
   background-position: -3px 0;
